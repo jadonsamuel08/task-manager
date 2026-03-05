@@ -1,4 +1,19 @@
 
 class Planner:
     def __init__(self):
-        pass
+        self.tasks = load_tasks()
+    
+    def add_task(self, title, due_date, priority):
+        new_id = len(self.tasks) + 1
+        task_inst = Task(new_id, title, due_date, priority)
+        self.tasks.append(task)
+    
+    def complete_task(self, task_id):
+        for task in self.tasks:
+            if task.id == task_id:
+                task.mark_complete()
+                break
+        save_tasks(self.tasks)
+    
+    def list_tasks(self):
+        return self.tasks
