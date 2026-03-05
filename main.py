@@ -1,5 +1,5 @@
 def main() -> None:
-    print("Hello! This is my task manager app")
+    pass
 
 
 if __name__ == "__main__":
