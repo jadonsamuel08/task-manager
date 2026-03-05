@@ -34,7 +34,7 @@ This project lets you add tasks, view all tasks, and mark tasks as completed. Ta
 ### 1) Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/jadonsamuel08/task-manager
 cd task_manager
 ```
 
