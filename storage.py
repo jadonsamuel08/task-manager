@@ -6,9 +6,12 @@ FILE_NAME = "tasks.json"
 def load_tasks():
     try:
         with open(FILE_NAME, "r") as file:
-            data = json.load(file)
+            content = file.read().strip()
+            if not content:
+                return []
+            data = json.loads(content)
             return [Task.from_dict(item) for item in data]
-    except FileNotFoundError:
+    except (FileNotFoundError, json.JSONDecodeError):
         return []
 
 def save_tasks(tasks):
