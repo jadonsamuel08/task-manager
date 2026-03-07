@@ -58,14 +58,16 @@ When you run the app, you’ll see this menu:
 1. Add Tasks
 2. View Tasks
 3. Complete Task
-4. Exit
+4. Delete Task
+5. Exit
 
 Typical flow:
 
 - Choose `1` to add a task
 - Choose `2` to list all tasks
 - Choose `3` and enter a task ID to mark it complete
-- Choose `4` to exit
+- Choose `4` to delete task
+- Choose `5` to exit
 
 ## Data Storage
 

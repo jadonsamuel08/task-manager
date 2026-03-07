@@ -15,7 +15,8 @@ def main() -> None:
         print("\n1. Add Tasks")
         print("2. View Tasks")
         print("3. Complete Task")
-        print("4. Exit")
+        print("4. Delete Task")
+        print("5. Exit")
         
         choice = input("\nChoose option: ")
         
@@ -36,6 +37,7 @@ def main() -> None:
         
         elif choice == "2":
             tasks = planner.list_tasks()
+            print("\nTask\t | Due Date | Completed\n" + ("-"*35))
             for task in tasks:
                 status = "✔" if task.completed else "✘"
                 print(f"{task.id}. {task.title} ({task.due_date}) [{status}]")
@@ -43,8 +45,12 @@ def main() -> None:
         elif choice == "3":
             task_id = int(input("Task ID: "))
             planner.complete_task(task_id)
-
+        
         elif choice == "4":
+            task_id = int(input("Task ID: "))
+            planner.delete_task(task_id)
+
+        elif choice == "5":
             break
 
 if __name__ == "__main__":

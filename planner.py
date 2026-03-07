@@ -19,3 +19,7 @@ class Planner:
     
     def list_tasks(self):
         return self.tasks
+    
+    def delete_task(self, id):
+        if self.tasks: self.tasks.pop(id-1)
+        save_tasks(self.tasks)
